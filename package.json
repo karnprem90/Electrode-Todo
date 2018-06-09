@@ -1,0 +1,78 @@
+{
+  "name": "assignment",
+  "version": "0.0.1",
+  "description": "",
+  "homepage": "",
+  "author": {
+    "name": "Prem",
+    "email": "karnprem90@gmail.com",
+    "url": ""
+  },
+  "contributors": [],
+  "files": [
+    "server",
+    "src",
+    "lib",
+    "dist"
+  ],
+  "main": "lib/server/index.js",
+  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "karnprem90/Assignment"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">= 6",
+    "npm": ">= 3"
+  },
+  "scripts": {
+    "build": "clap build",
+    "prod-start": "NODE_ENV=production clap -n -x electrode/build prod",
+    "start": "if test \"$NODE_ENV\" = \"production\"; then npm run prod-start; else clap dev; fi",
+    "test": "clap check",
+    "coverage": "clap check",
+    "prod": "echo 'Starting standalone server in PROD mode'; NODE_ENV=production node ./lib/server/",
+    "heroku-postbuild": "clap build",
+    "install": "echo OK"
+  },
+  "dependencies": {
+    "antd": "^3.6.1",
+    "axios": "^0.18.0",
+    "bcrypt": "^2.0.1",
+    "bcryptjs": "^2.4.3",
+    "bluebird": "^3.4.6",
+    "body-parser": "^1.18.3",
+    "connected-react-router": "^4.3.0",
+    "electrode-archetype-react-app": "^5.0.0",
+    "electrode-auto-ssr": "^1.0.0",
+    "electrode-confippet": "^1.0.0",
+    "electrode-cookies": "^1.0.1",
+    "electrode-react-webapp": "^2.1.0",
+    "electrode-redux-router-engine": "^1.5.0",
+    "express": "^4.0.0",
+    "history": "^4.7.2",
+    "jsonwebtoken": "^8.2.2",
+    "lodash": "^4.10.1",
+    "mongoose": "^5.1.4",
+    "react-cookie": "^2.1.6",
+    "react-notify-toast": "^0.4.1",
+    "react-router-dom": "^4.3.1",
+    "react-router-redux": "^4.0.8",
+    "redux-promise-middleware": "^5.1.1",
+    "redux-thunk": "^2.3.0",
+    "request": "^2.87.0",
+    "validator": "^10.3.0"
+  },
+  "devDependencies": {
+    "electrode-archetype-react-app-dev": "^5.0.0"
+  },
+  "eslintConfig": {
+    "rules": {
+      "quotes": [
+        2,
+        "single"
+      ]
+    }
+  }
+}
